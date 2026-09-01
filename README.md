@@ -8,6 +8,8 @@ Python 3.10+ and Poetry are required. On macOS, install them with Homebrew:
 brew install python@3.10 poetry
 ```
 
+On Linux, install Python 3.10+ with your distribution's package manager, then install Poetry using the [official installer](https://python-poetry.org/docs/#installing-with-the-official-installer).
+
 ## Quick start
 
 ```bash
