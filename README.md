@@ -28,7 +28,7 @@ position/instruction pair creates and runs one robot.
 upper_right_x upper_right_y   # builds the planet boundary, e.g. 5 3
 robot_x robot_y orientation   # builds a robot, e.g. 1 1 E
 instructions                  # parses commands, e.g. RFRFRF
-...                            # robot and instruction lines repeat
+...                           # robot and instruction lines repeat
 ```
 
 ## Error handling
@@ -64,9 +64,9 @@ tests/
   - Movement and turn directions use separate types, keeping `FORWARD` apart
     from `LEFT` and `RIGHT`.
   - Commands are immutable and do not have per-run state.
-  - The simulation loop command dispatches commands through the common `execute(robot, planet)`.
-  - A new command is added by implementing `Command` and registering its input
-    code.
+  - The simulation loop dispatches commands through the common `execute(robot, planet)`.
+  - To add a command to the Mars text interface, implement `Command` and register
+  an instance under its input code in `INSTRUCTION_TO_COMMAND`.
 
 - Parsing and terminal I/O
 
